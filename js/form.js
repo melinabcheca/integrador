@@ -11,7 +11,7 @@ let categoria = '';
 
 function obtenerCantidad () {
     let c = document.getElementById("inputCantidad").value;
-    return c
+    return c;
 }
 
 function obtenerCategoria()  {
