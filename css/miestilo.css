@@ -72,7 +72,17 @@ margin-right: 15px;
   text-decoration-color: gray;
 }
 
-#enviar {
+#btnEnviar {
+  background-color:rgb(121, 188, 19);
+  border-color:rgb(121, 188, 19);
+}
+
+#btnBorrar {
+  background-color:rgb(121, 188, 19);
+  border-color:rgb(121, 188, 19);
+}
+
+#btnResumen {
   background-color:rgb(121, 188, 19);
   border-color:rgb(121, 188, 19);
 }
@@ -81,3 +91,6 @@ margin-right: 15px;
   padding-inline: 5%;
 }
 
+#dResultado {
+  background-color: #CBE5FE;
+}

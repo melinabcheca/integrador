@@ -47,7 +47,7 @@
                                     <a class="nav-link" href="#">Conviértete en orador</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-success" href="#">Comprar tickets</a>
+                                    <a class="nav-link text-success" href="#elFrom">Comprar tickets</a>
                                 </li>
                         </ul>
                 </div>
@@ -65,7 +65,7 @@
                 <h1>Conf Bs As</h1>
                 <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores del primer nivel que tenemos para ti. Te Esperamos!</p>
                 <button type="button" class="btn btn-outline-light btn-lg" style="color: white;">Quiero ser orador</button>
-                <button type="button" class="btn btn-success btn-lg" style="background-color: #289f42;">Comprar tickets</button>
+                <button type="button" onclick="window.location.href='#elFrom';"  class="btn btn-success btn-lg" style="background-color: #289f42;">Comprar tickets</button>
             </div>
         </div>
     </div>
@@ -152,8 +152,7 @@
         </div>
         <!--INICIO FORM-->
             <div class="container mt-1 mb-4">
-                <form action="/action_page.php">
-
+                <form><!-- action="/action_page.php"-->
                     <div class="row">
                         <div class="col-2">
                         </div>
@@ -182,7 +181,7 @@
                         </div>
                         <div class="col-8">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-success" id="enviar">Enviar</button>
+                                <button type="submit" class="btn btn-success" id="btnEnviar">Enviar</button>
                             </div>
                         </div>
                         <div class="col-2">
@@ -191,6 +190,144 @@
                 </form>
             </div>
         <!--FIN FORM-->
+
+        <!----######################################################## Inicio desarrollo con JS #########################################################------>
+        <div class="justify-content-center">
+                    <div class="card-group justify-content-center ms-lg-0 ms-md-0 ms-sm-0 ms-xs-0">
+                        <div class="row">
+                            <div class="col-3 mx-1">
+                                <div class="card text-center" style="width:250px;border-color: blue;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Estudiante</h4>
+                                        <h5 class="card-text text-center text-secondary">Tiene un descuento</h5>
+                                        <p class="card-text text-center"><b>80%</b></p>
+                                        <p class="card-text text-center text-secondary">* presentar documentacion </p>
+                                        <p></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3 mx-1">
+                                <div class="card text-center" style="width:250px;border-color: rgb(33, 116, 139);">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Trainee</h4>
+                                        <h5 class="card-text text-center text-secondary">Tiene un descuento</h5>
+                                        <p class="card-text text-center"><b>50%</b></p>
+                                        <p class="card-text text-center text-secondary">* presentar documentacion </p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 mx-1">
+                                <div class="card text-center" style="width:250px;border-color: rgb(199, 149, 14);"">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Junior</h4>
+                                        <h5 class="card-text text-center text-secondary">Tiene un descuento</h5>
+                                        <p class="card-text text-center"><b>15%</b></p>
+                                        <p class="card-text text-center text-secondary">* presentar documentacion </p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+        <div class="justify-content-center">
+            <div class="col-12 mt-4 form">
+                    <small>VENTA</small>
+                    <h1>VALOR DEL TICKET $200</h1>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------- Inicio Formulario JS ----------------------------------------------------->
+            <div class="container mt-1 mb-4">
+                <form id="elFrom" class="was-validated">
+                    <div class="row">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" name="inputNombre">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" name="inputApellido">
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-8">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Correo" name="inputEmail">
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-4">
+                            <label>Cantidad</label>
+                            <input type="number" class="form-control" id="inputCantidad" placeholder="cantidad" name="inputCantidad">
+                        </div>
+                        <div class="col-4">
+                            <label for="sel1" class="form-label">Categoría</label>
+                            <select class="form-select" id="sel1" name="inputCategoria">
+                              <option>Estudiante</option>
+                              <option>Trainee</option>
+                              <option>Junior</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-8">
+                           <!-- <div class="container background-color p-3 form-control" id="dResultado"> -->
+                            <div class="container form-control p-3 align-self-start fw-semibold text-primary" id="dResultado">
+                                <p class="h5"> Total a pagar: $ <span id="resultado"></span> </p>
+                            </div>
+
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+
+                    <!---  Botones del form -->
+                    <div class="row mt-3">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-4">
+                            <div class="d-grid">
+                                <button type="reset" class="btn btn-success" id="btnBorrar">Borrar</button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success" id="btnResumen">Resumen</button>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+    <!------------------------------------------------------------- Fin Formulario JS ----------------------------------------------------->
+
+    <!----######################################################## Fin desarrollo con JS #########################################################------>
+
+    <script src="js/form.js"></script>
 </body>
 
 <footer>
@@ -227,5 +364,7 @@
         </div>
     </nav>
 </footer>
+
+
 
 </html>
